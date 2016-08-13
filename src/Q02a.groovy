@@ -9,6 +9,13 @@ int factorial(int n) {
     }
 }
 
+int factorialIterative(int n) {
+    for (int i=n-1; i>1; i--) {
+        n = n * i
+    }
+    return n
+}
+
 Scanner input = new Scanner(System.in)
 while (true) {
     print "Factorial calculator - enter n (0 to exit): "
@@ -16,5 +23,6 @@ while (true) {
     if (n == 0) {
         break
     }
-    println factorial(n)
+    println factorial(n) + " (recursive)"
+    println factorialIterative(n) + " (iterative)"
 }
