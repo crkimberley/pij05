@@ -27,7 +27,9 @@
 //
 // then
 // n-8 discs from middle stack -> right     H(n-8)
-// single middle disc -> left...etc.
+// single middle disc -> left
+// n-10 discs from right stack -> middle    H(n-10)
+// etc.
 //
 // Last few moves are slightly different for 3 cases...
 // n = 6, 12...
@@ -54,7 +56,6 @@ int hanoiReduxMoves(int n) {
     // total is 2 * result + 1
     int result = 0
     int x = 2
-    // each step can contain multiple moves
     int step = 1
     // calculation is slightly different when n is a multiple of 6
     boolean numberOfDiscsIsAMultipleOf6 = (n % 6 == 0)
