@@ -5,7 +5,7 @@ import static java.lang.Math.pow
  */
 Scanner input = new Scanner(System.in)
 while (true) {
-    print "Enter paper size, eg A4 (q to exit): "
+    print "Enter paper size, eg A4, A00 (q to exit): "
     String areaString = input.next()
     if (areaString.charAt(0) == 'q' as char) {
         break
@@ -14,8 +14,7 @@ while (true) {
     if (areaString.charAt(1) == '0' as char) {
         area = areaString.length() - 1
     } else {
-        int sizeNumber = Integer.parseInt(areaString.substring(1))
-        area = pow(2, -sizeNumber)
+        area = pow(2, -Integer.parseInt(areaString.substring(1)))
     }
     println "Area = " + area + "sq.m"
     println "Long side = " + longSide(area) + "mm"
