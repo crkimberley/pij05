@@ -51,10 +51,10 @@ while (true) {
     println "Minimum number of moves = " + hanoiReduxMoves(numberOfDiscs)
 }
 
-int hanoiReduxMoves(int n) {
+double hanoiReduxMoves(int n) {
     // result variable is for calculating one set of moves
     // total is 2 * result + 1
-    int result = 0
+    double result = 0
     int x = 2
     int step = 1
     // calculation is slightly different when n is a multiple of 6
@@ -72,7 +72,7 @@ int hanoiReduxMoves(int n) {
     }
 }
 
-long hanoiMoves(int n) {
+double hanoiMoves(int n) {
     if (n == 1) {
         return 1
     } else {
